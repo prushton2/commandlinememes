@@ -1,0 +1,2 @@
+pyinstaller main.py --onefile
+echo "Your executable is dist/main. Keep main in its own directory"
