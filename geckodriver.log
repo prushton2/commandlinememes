@@ -623,3 +623,22 @@ JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch res
 JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
 JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
 JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+1694619104149	geckodriver	INFO	Listening on 127.0.0.1:58517
+1694619104697	mozrunner::runner	INFO	Running command: MOZ_CRASHREPORTER="1" MOZ_CRASHREPORTER_NO_REPORT="1" MOZ_CRASHREPORTER_SHUTDOWN="1" MOZ_NO_REMOTE="1" "/usr ... te" "--remote-debugging-port" "41415" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofileEXhzvx"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+Crash Annotation GraphicsCriticalError: |[0][GFX1-]: vaapitest: ERROR (t=0.7483) [GFX1-]: vaapitest: ERROR
+Crash Annotation GraphicsCriticalError: |[0][GFX1-]: vaapitest: ERROR (t=0.7483) |[1][GFX1-]: vaapitest: VA-API test failed: failed to initialise VAAPI connection.
+ (t=0.74835) [GFX1-]: vaapitest: VA-API test failed: failed to initialise VAAPI connection.
+
+1694619105512	Marionette	INFO	Marionette enabled
+1694619105612	Marionette	INFO	Listening on port 37785
+WebDriver BiDi listening on ws://127.0.0.1:41415
+Read port: 37785
+1694619105961	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.error: ({})
+DevTools listening on ws://127.0.0.1:41415/devtools/browser/788fc622-7b7b-4c51-8e1a-6470b0bdb007
+JavaScript error: , line 0: uncaught exception: undefined
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+1694619118118	Marionette	INFO	Stopped listening on port 37785

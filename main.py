@@ -3,28 +3,8 @@ import json
 
 def main():
 
-    config = None
-
-    try:
-        with open("./config.json", "r") as f:
-            read = f.read()
-            if(read == ""):
-                config = json.loads('{"browser": ""}')
-            else:
-                config = json.loads(read)
-    except :
-        print("./config.json not found. Please create an empty file called config.json")
-        return
-
-    if(config["browser"] == ""):
-        print("Your browser isnt set. Select a browser: \n0: Firefox\n1: Chromep")
-        browser = int(input("> "))
-
-        config["browser"] = ["Firefox", "Chrome", "Safari"][browser]
-
-        with open("./config.json", "w") as f:
-            f.write(json.dumps(config))
-
+    print("Select a browser: \n0: Firefox\n1: Chrome")
+    browser = int(input("> "))
 
     print("Search for a template")
     query = input("> ")
@@ -54,10 +34,8 @@ def main():
 
     # print(templates[template].url)
 
-    driver = None
-    with open("./config.json", "r") as f:
-        driver = lib.loadDriver(f.read())
-        
+    driver = lib.loadDriver(browser)
+
     lib.createMeme(driver, text, templates[template].url)
 
 if(__name__ == "__main__"):

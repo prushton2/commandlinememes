@@ -50,11 +50,10 @@ def search(query):
     #     return []
 
 def loadDriver(config):
-    config = json.loads(config)
     # this will be a choice (COOL!!!)
-    if(config["browser"] == "Firefox"):
+    if(config == 0):
         return webdriver.Firefox()
-    if(config["browser"] == "Chrome"):
+    if(config == 1):
         return webdriver.Chrome()
 
 
