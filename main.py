@@ -17,7 +17,7 @@ def main():
         return
 
     if(config["browser"] == ""):
-        print("Your browser isnt set. Select a browser: \n0: Firefox\n1: Chrome\n2: Safari")
+        print("Your browser isnt set. Select a browser: \n0: Firefox\n1: Chrome")
         browser = int(input("> "))
 
         config["browser"] = ["Firefox", "Chrome", "Safari"][browser]

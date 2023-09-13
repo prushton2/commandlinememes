@@ -56,8 +56,6 @@ def loadDriver(config):
         return webdriver.Firefox()
     if(config["browser"] == "Chrome"):
         return webdriver.Chrome()
-    if(config["browser"] == "Safari"):
-        return webdriver.Safari()
 
 
 
