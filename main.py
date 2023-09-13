@@ -1,22 +1,31 @@
-from bs4 import BeautifulSoup
-
-from selenium import webdriver
-from selenium.webdriver.common.keys import Keys
-
-import requests
+import lib
 
 
+print("Search for a template")
+query = input("> ")
 
-def search(query):
-    # query = "sponebob"
+templates = lib.search(query)
 
-    response = requests.get(f"https://imgflip.com/search?q={query}")
+print("Select a template")
+for j, i in enumerate(templates):
+    if(i.name[0:2] != "//"):
+        print(f"{j}: {i.name}")
 
-    with open("response.html", "w") as f:
-        f.write(response.text)
+template = int(input("> "))
 
-    soup = None
 
-    with open("response.html") as fp:
-        soup = BeautifulSoup(fp, features="lxml")
+text = []
 
+print("Enter your captions from top left to bottom right. Double press enter on your last caption")
+
+ipt = None
+while(ipt != ""):
+    ipt = input("> ")
+    text.append(ipt)
+
+text.pop()
+
+print(templates[template].url)
+
+driver = lib.loadDriver({"browser": "Firefox"})
+lib.createMeme(driver, text, templates[template].url)
