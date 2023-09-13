@@ -20,13 +20,13 @@ class SearchResult:
 def search(query):
     response = requests.get(f"https://imgflip.com/search?q={query}")
 
-    with open("response.html", "w") as f:
-        f.write(response.text)
+    # with open("response.html", "w") as f:
+    #     f.write(response.text)
 
-    soup = None
+    # soup = None
 
-    with open("response.html") as fp:
-        soup = BeautifulSoup(fp, features="lxml")
+    # with open("response.html") as fp:
+    soup = BeautifulSoup(response.text, features="lxml")
 
     searchchunk = soup.find(id="s-results")
     
