@@ -50,8 +50,15 @@ def search(query):
     #     return []
 
 def loadDriver(config):
+    config = json.loads(config)
     # this will be a choice (COOL!!!)
-    return webdriver.Firefox()
+    if(config["browser"] == "Firefox"):
+        return webdriver.Firefox()
+    if(config["browser"] == "Chrome"):
+        return webdriver.Chrome()
+    if(config["browser"] == "Safari"):
+        return webdriver.Safari()
+
 
 
 def createMeme(driver, text, url):
